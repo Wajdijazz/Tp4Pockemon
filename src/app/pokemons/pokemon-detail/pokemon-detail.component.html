@@ -6,7 +6,7 @@
          No. {{details.id |  number : '3.0'}} 
         </mat-grid-tile>
         <mat-grid-tile>
-            {{details.name}} 
+          Nom:  {{details.name}} 
            
 
          </mat-grid-tile>
@@ -20,21 +20,22 @@
      
      
               </mat-grid-tile>
-         <mat-grid-tile  *ngFor="let type of types">
+         <mat-grid-tile >
 
            
-
-            <mat-chip-list  >
+ Type: 
+            <mat-chip-list  *ngFor="let type of types"  >
+                    
                 <mat-chip> 
 
-                    {{type}} 
+                 {{type}} 
     
                  </mat-chip>
             </mat-chip-list>
         </mat-grid-tile>
         <mat-grid-tile style="text-align: center;">
             
-           {{details.description}} 
+            Description: {{details.description}} 
               </mat-grid-tile>
 
              
@@ -43,5 +44,4 @@
 </mat-card><br>
 
 
-<button (click)="goBack()" mat-button color="primary">Return</button>
 
