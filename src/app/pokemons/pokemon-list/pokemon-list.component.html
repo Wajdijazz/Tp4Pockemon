@@ -1,9 +1,6 @@
 
 
-<mat-form-field  class="mat-form">
-    <input style="color: black;"  matInput placeholder="Rechercher" 
-       >
-  </mat-form-field> 
+ 
 <mat-nav-list infiniteScroll     [infiniteScrollDistance]="2"
 [infiniteScrollThrottle]="50"  (scrolled)="onScroll()" >
     <mat-list-item style="color:black" *ngFor="let pokemon of pokemons"  [routerLink]="['','pokemon-detail',pokemon.id]"  routerLinkActive="active">
