@@ -1,0 +1,47 @@
+<mat-card>
+
+    <mat-grid-list cols="2" rowHeight="100px">
+
+        <mat-grid-tile>
+         No. {{details.id |  number : '3.0'}} 
+        </mat-grid-tile>
+        <mat-grid-tile>
+            {{details.name}} 
+           
+
+         </mat-grid-tile>
+         <mat-grid-tile>
+       Taille: {{details.height  |  number : '1.1'}} m
+
+
+         </mat-grid-tile>
+         <mat-grid-tile>
+               Poids: {{details.weight  |  number : '1.1'}} kg
+     
+     
+              </mat-grid-tile>
+         <mat-grid-tile  *ngFor="let type of types">
+
+           
+
+            <mat-chip-list  >
+                <mat-chip> 
+
+                    {{type}} 
+    
+                 </mat-chip>
+            </mat-chip-list>
+        </mat-grid-tile>
+        <mat-grid-tile style="text-align: center;">
+            
+           {{details.description}} 
+              </mat-grid-tile>
+
+             
+      </mat-grid-list>
+
+</mat-card><br>
+
+
+<button (click)="goBack()" mat-button color="primary">Return</button>
+

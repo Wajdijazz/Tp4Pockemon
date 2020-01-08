@@ -1,0 +1,17 @@
+
+<div>
+
+<mat-nav-list infiniteScroll     [infiniteScrollDistance]="2"
+[infiniteScrollThrottle]="50"  (scrolled)="onScroll()" >
+    <mat-list-item style="color:black" *ngFor="let pokemon of pokemons"  [routerLink]="['pokemon-detail',pokemon.id]"  routerLinkActive="active">
+
+        {{pokemon.id}} .
+
+         {{pokemon.name}} 
+        
+        </mat-list-item>
+ 
+   </mat-nav-list>
+   </div>
+
+   
